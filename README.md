@@ -46,7 +46,7 @@ Post has one Category
 - id
 - user_name
 - display_name
-- dassword_digest
+- password_digest
 
 ### Categories ### 
 - id
