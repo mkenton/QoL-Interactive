@@ -61,8 +61,7 @@ function signup(username, password) {
 }
 
 function login(username, password) {
-  // fetch(`${url}/api/v1/login`, {
-  fetch(`http://localhost:3000//api/v1/login`, {
+  fetch(`http://localhost:3000/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -107,7 +106,13 @@ return (
         {/* <Lessons/> */}
       </div>
       :
-      <LoginForm />
+      <div className="App">
+        <header className="App-header">
+          HotKeys to Success
+        </header>
+        <LoginForm />
+      </div>
+
     }
   </div>
 )
