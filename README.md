@@ -1,10 +1,10 @@
-# QoL-Interactive #
+# HotKeys to Success #
 
 ## Project Pitch ##
 
-QoL (Quality of Life) Interactive is for beginners and experienced coders alike. We often find ourselves repeating actions, typing out long statements, and retracing our footsteps in suboptimal ways. In the back of our heads, we often think "there's probably a better way," but we continue with our stubborn habits while myopically focusing only on the code of our present projects. But of course there's a better way! Maybe *you* will have to be the one to make it, but chances are, *something* is out there, and you just need to take the moment to find it! QoL-Interactive aims to teach you shortcuts, allow you to practice them in fun ways, and foster discussion for sharing QoL improvement ideas.
+HotKeys to Success is an interactive playground for mastering productivity-boosting shortcuts for beginner and expert programmers alike. We often find ourselves repeating actions, typing out long statements, and retracing our footsteps in suboptimal ways. In the back of our heads, we often think "there's probably a better way," but we continue with our stubborn habits while myopically focusing only on the code of our present projects. But of course there's a better way! Maybe *you* will have to be the one to make it, but chances are, *something* is out there, and you just need to take the moment to find it! QoL-Interactive aims to teach you shortcuts, allow you to practice them in fun ways, and foster discussion for sharing QoL improvement ideas.
 
-QoL-Interactive is a web app comprising 3 main components:
+HotKeys to Success is a web app comprising 3 main components:
 1. Lessons on VSCode Shortcuts, CLI configs, and other productivity-increasers and time-savers
 2. QoL-centered discussion board where users share their own QoL improvements (useful shortcuts, configurations, bash/zsh aliases, etc.)
 3. Arcade section to put your keyboard shortcut skills to test (stretch goal)
@@ -34,23 +34,18 @@ QoL-Interactive is a web app comprising 3 main components:
 
 User has many Lessons through UserLessons
 
-Lessons has many Users through userLessons
+Lessons has many Users through UserLessons
 
 User has many Posts
 
 Post has one User
 
-Post has one Category
 
 ### Users ###
 - id
 - user_name
 - display_name
-- dassword_digest
-
-### Categories ### 
-- id
-- category_name
+- password_digest
 
 ### Posts ###
 - id

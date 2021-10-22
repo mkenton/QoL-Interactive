@@ -1,12 +1,31 @@
+// import reportWebVitals from './reportWebVitals';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {Provider} from 'react-redux'
+import {store} from './store'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+// const defaultStore = { user: {username: "front_end_test"} }
+
+// function reducer(store = defaultStore, action) {
+//     switch (action.type) {
+//         case "SETUSER":
+//             return { ...store, user: action.payload }
+//         default:
+//             return store
+//     }
+// }
+
+// const store = createStore( reducer, defaultStore, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -14,4 +33,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();
