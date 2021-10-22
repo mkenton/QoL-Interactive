@@ -3,30 +3,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Provider} from 'react-redux'
-import {store} from './store'
+import {createStore, applyMiddleware} from 'redux'
+import thunkMiddleware from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+// import {store} from './store'
 import App from './App';
+import rootReducer from "./reducer"
 
+// const store = createStore(
+//   rootReducer,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// );
 
-// const defaultStore = { user: {username: "front_end_test"} }
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
 
-// function reducer(store = defaultStore, action) {
-//     switch (action.type) {
-//         case "SETUSER":
-//             return { ...store, user: action.payload }
-//         default:
-//             return store
-//     }
-// }
-
-// const store = createStore( reducer, defaultStore, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(rootReducer, composedEnhancer);
 
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
     <App />
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

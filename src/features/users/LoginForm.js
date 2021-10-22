@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {fetchUser} from "./usersSlice"
 
 function LoginForm() {
   const dispatch = useDispatch();
+
+  // const isLoading = useSelector(
+  //   (state) => state.users.status === "loading"
+  // );
 
   const [formData, setFormData] = useState({
     username: "",
@@ -18,7 +23,8 @@ function LoginForm() {
 
   function handleOnSubmit(event) {
     event.preventDefault();
-    dispatch({ type: "users/add", payload: formData });
+    // dispatch(fetchUser());
+    event.target.reset();
   }
 
   return (
